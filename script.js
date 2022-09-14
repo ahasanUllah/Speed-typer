@@ -43,6 +43,7 @@ const typeController = (e) => {
 
    if (newLetterCorrect) {
       display.innerHTML += `<span class="green">${newLetter === ' ' ? '▪' : newLetter}</span>`;
+      e.preventDefault();
    } else {
       display.innerHTML += `<span class="red">${newLetter === ' ' ? '▪' : newLetter}</span>`;
       errorCount++;
@@ -121,6 +122,7 @@ const start = () => {
       }
       count--;
    }, 1000);
+   console.log(count);
 };
 
 // START Countdown

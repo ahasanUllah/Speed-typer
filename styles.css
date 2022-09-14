@@ -10,6 +10,9 @@ body {
    background-position: left top;
    font-family: 'Zilla Slab', serif;
 }
+body::-webkit-scrollbar {
+   display: none;
+}
 
 .box-container {
    width: 70%;
