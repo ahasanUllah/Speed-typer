@@ -89,11 +89,11 @@ const gameOver = (speedCount) => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <p>Your Speed <span class="bold red">${wordPerMinute}</span> WPM</p>
+    <p>Your Speed <span class="bold green">${wordPerMinute}</span> WPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-   addHistory(questionText, timeTaken, errorCount);
+   addHistory(questionText, timeTaken, errorCount, wordPerMinute);
 
    // restart everything
    startTime = null;

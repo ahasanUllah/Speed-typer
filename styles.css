@@ -179,7 +179,27 @@ button {
    position: fixed;
    top: 0;
 }
-
+/* BLOG */
+.blogs {
+   background-color: white;
+   max-width: 1040px;
+   margin: 40px auto;
+}
+.blogs h1 {
+   text-align: center;
+}
+.blog {
+   text-align: center;
+   margin-top: 30px;
+   padding: 20px 30px;
+}
+.blog h2 {
+   margin-bottom: 20px;
+}
+.blog p {
+   text-align: left;
+}
+/* MEDIA QUERIES */
 @media only screen and (max-width: 700px) {
    .box-container {
       padding: 0 20px;
@@ -193,5 +213,8 @@ button {
    }
    .card {
       flex: 100%;
+   }
+   .blogs {
+      margin: 20px 20px;
    }
 }
