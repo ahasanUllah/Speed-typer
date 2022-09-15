@@ -122,7 +122,7 @@ const start = () => {
       }
       count--;
    }, 1000);
-   console.log(count);
+   countdownOverlay.innerText = '';
 };
 
 // START Countdown
