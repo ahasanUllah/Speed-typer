@@ -144,13 +144,16 @@ button {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
+   gap: 10px;
 }
 
 .card {
+   flex: 30%;
    width: 100%;
    height: 100%;
    padding: 50px;
    display: flex;
+   flex-direction: column;
    justify-content: space-between;
    align-items: center;
    padding: 20px 30px;
@@ -160,6 +163,10 @@ button {
    background: linear-gradient(92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85%);
    backdrop-filter: blur(5px);
    margin-bottom: 30px;
+}
+.card h3 {
+   /* text-align: justify; */
+   margin-bottom: 8px;
 }
 
 #modal-background {
@@ -179,5 +186,11 @@ button {
    }
    .card {
       flex-direction: column;
+   }
+   #histories {
+      gap: 0;
+   }
+   .card {
+      flex: 100%;
    }
 }
