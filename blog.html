@@ -17,8 +17,8 @@
             <div class="blog">
                <h2>Differance between local storage and session storage</h2>
                <p>
-                  <strong>Local Storage</strong> is a property that allows JavaScript sites and apps to save key value
-                  pairs in a web browser with no expiration date. <br />
+                  <strong>Local Storage</strong> allows JavaScript to store data in the browser. it has no expiration
+                  time<br />
                   <strong>SessionStorage</strong> object stores data only for a session. It means that the data stored
                   in the sessionStorage will be deleted when the browser is closed. <br />
                   The <strong>difference</strong> between sessionStorage and localStorage is that localStorage data does
@@ -29,28 +29,27 @@
                <h2>Difference between global scope and block scope</h2>
                <p>
                   <strong>Global Scope</strong>
-                  Variables declared Globally (outside any function) have Global Scope. Global variables can be accessed
-                  from anywhere in a JavaScript program. Variables declared with var, let and const are quite similar
-                  when declared outside a block. <br />
-                  <strong>Block Scope</strong> This scope restricts the variable that is declared inside a specific
-                  block, from access by the outside of the block. The let & const keyword facilitates the variables to
-                  be block scoped. In order to access the variables of that specific block, we need to create an object
-                  for it.
+                  Variables declared Globally have Global Scope. A global variable can be accessed from anywhere for
+                  example you can access it from a function or if else scope. It can be var let or const no matter what
+                  it can be accessed from everywhere <br />
+                  <strong>Block Scope:</strong> When a variable is declared inside a function or for loop it's called
+                  block scope. In other words a variable declared in curly braces is called block scope
                </p>
             </div>
             <div class="blog">
                <h2>What is Event loop</h2>
                <p>
-                  The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call
-                  Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call
-                  Stack, which effectively runs it.
+                  The event loop removes the elements from the call stack which will take time to process so it sends
+                  that element to the queue. in the meantime other elements which is already in the call stack can have
+                  a chance to do their work. When call stack get empty the event loop sends the first element to the
+                  call stack from queue.and push it to the call stack which will run it effectively.
                </p>
             </div>
             <div class="blog">
                <h2>How to get undifined in JavaScript</h2>
                <p>
                   1. You will get undefined value when you call a non-existent property or method of an object. <br />
-                  2. If you pass less arguments in function call then, that parameter will have undefined value. <br />
+                  2. If you pass less arguments in function call then that parameter will have undefined value. <br />
                   3. A variable or an object has an undefined value when no value is assigned before using it.
                </p>
             </div>
