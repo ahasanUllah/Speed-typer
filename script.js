@@ -38,6 +38,7 @@ const typeController = (e) => {
    }
 
    userText += newLetter;
+   let speedCount = userText;
 
    const newLetterCorrect = validate(newLetter);
 
@@ -51,7 +52,7 @@ const typeController = (e) => {
 
    // check if given question text is equal to user typed text
    if (questionText === userText) {
-      gameOver();
+      gameOver(speedCount);
    }
 };
 
@@ -63,13 +64,18 @@ const validate = (key) => {
 };
 
 // FINISHED TYPING
-const gameOver = () => {
+const gameOver = (speedCount) => {
    document.removeEventListener('keydown', typeController);
+   // Total word count
+   let typedSentence = '';
+   if (speedCount) {
+      typedSentence = speedCount.split(' ');
+   }
    // the current time is the finish time
    // so total time taken is current time - start time
    const finishTime = new Date().getTime();
-   const timeTaken = (finishTime - startTime) / 1000;
-
+   const timeTaken = parseInt((finishTime - startTime) / 1000);
+   const wordPerMinute = parseInt(typedSentence.length / (timeTaken / 60));
    // show result modal
    resultModal.innerHTML = '';
    resultModal.classList.toggle('hidden');
@@ -81,8 +87,9 @@ const gameOver = () => {
    // show result
    resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
+    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>Your Speed <span class="bold red">${wordPerMinute}</span> WPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
